@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Zapros 1",
+    "url": "?point=2"
+  },
+  {
+    "name": "Zapros 2",
+    "url": "?point=5"
+  },
+  {
+    "name": "Zapros 3",
+    "url": "?point=6"
+  },
+  {
+    "name": "Zapros 4",
+    "url": "?point=7"
+  },
+  {
+    "name": "Zapros 5",
+    "url": "?point=8"
+  },
+  {
+    "name": "Zapros 6",
+    "url": "?point=9"
+  },
+  {
+    "name": "Procedure",
+    "url": "?point=10"
+  },
+  {
+    "name": "Process",
+    "url": "?point=11"
+  },
+  {
+    "name": "Exit",
+    "url": "?point=3"
+  }
+]
