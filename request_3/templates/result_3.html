@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Покажите все сведения об оборудовании, которое было установлено самым первым по времени</h2>
+    <table class="table mx-auto mb-3" style="width: 400px">
+        <thead>
+            <tr>
+                <th scope="col">Шифр  оборудования</th>
+                <th scope="col">Тип оборудования</th>
+                <th scope="col">Название оборудования</th>
+                <th scope="col">Производитель</th>
+                <th scope="col">Дата последнего тестирования</th>
+                <th scope="col">Статус оборудования</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for zap in zapros %}
+                <tr>
+                    <td>{{ zap['ID_EQ'] }}</td>
+                    <td>{{ zap['Type_of_equipment'] }}</td>
+                    <td>{{ zap['Name_Eq'] }}</td>
+                    <td>{{ zap['Manufactures'] }}</td>
+                    <td>{{ zap['Last_test_Date'] }}</td>
+                    <td>{{ zap['Equipment_status'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/menu" class="btn btn-outline-success mb-3">Назад в меню</a>
+{% endblock %}
