@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>План будущих тестирований</h2>
+    <form method="post" class="text-center mx-auto mb-3" action="">
+         {% for row in plan_get %}
+            <input type=hidden id="id_pl" name="id_pl" value={{ row['id_p'] }}>
+            <table class="table mx-auto mb-3" style="width: 800px">
+            {% endfor %}
+                    <thead>
+                    <tr>
+                        <th scope="col">Оборудование</th>
+                        <th scope="col">Тестирование</th>
+                        <th scope="col">Сотрудник</th>
+                        <th scope="col">Дата</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for zap in plan_get %}
+                        <tr>
+                            <td>{{ zap['id_eqs'] }}</td>
+                            <td>{{ zap['id_tls'] }}</td>
+                            <td>{{ zap['id_ems'] }}</td>
+                            <td>{{ zap['date_new'] }}</td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>        
+            
+    </form>
+
+
+    <h2>Добавить запись в план</h2>
+    <form method="post" class="text-center mx-auto mb-3" action="">
+        <table class="table mx-auto mb-3" style="width: 800px">
+            <tbody>
+            <td><select class="form-control" id="nameeq" name="nameeq">
+                {% for nameeq in nameeqs %}
+                    <option value= {{ nameeq['name_eq'] }} > {{ nameeq['name_eq'] }} </option>
+                {% endfor %}
+            </select></td>
+            <td><select class="form-control" id="nametest" name="nametest">
+                {% for nametest in nametests %}
+                    <option value={{ nametest['name_test'] }}> {{ nametest['name_test'] }} </option>
+                {% endfor %}
+            </select></td>
+            <td><select class="form-control" id="surnamem" name="surnamem">
+                {% for surnamem in surnamems %}
+                    <option value={{ surnamem['surname'] }}> {{ surnamem['surname'] }} </option>
+                {% endfor %}
+            </select></td>
+           <td><input class="form-control" type="text" id="year" name="year" required>
+                
+      
+                
+           </td>
+            
+           
+            <td>
+                <button type="submit" class="btn btn-outline-success" name="send" value="send">send</button>
+            </td>
+            </tbody>
+        </table>
+    </form>
+
+    <a href="/menu" class="btn btn-outline-success mb-3">Назад в меню</a>
+{% endblock %}
