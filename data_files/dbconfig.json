@@ -1,0 +1,20 @@
+{
+  "Guest": {
+    "host": "127.0.0.1",
+    "user": "guest",
+    "password": "1",
+    "database": "kurs"
+  },
+  "Worker": {
+    "host": "127.0.0.1",
+    "user": "adm",
+    "password": "123",
+    "database": "kurs"
+  },
+  "Manager": {
+    "host": "127.0.0.1",
+    "user": "adm",
+    "password": "123",
+    "database": "kurs"
+  }
+}
