@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Покажите фамилии сотрудников и количество протоколов тестирования, составленных каждым из них, в марте 2017 года.</h2>
+    <table class="table mx-auto mb-3" style="width: 400px">
+        <thead>
+        <tr>
+            <th scope="col">Фамилия сотрудника</th>
+
+            <th scope="col">Количество протоколов тестирования</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for zap2 in zapros2 %}
+            <tr>
+                <td>{{ zap2['Surname'] }}</td>
+
+                <td>{{ zap2['count(ID_TP)'] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/menu" class="btn btn-outline-success mb-3">Назад в меню</a>
+{% endblock %}
