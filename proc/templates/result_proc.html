@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table mx-auto mb-3" style="width: 400px">
+        <thead>
+        <tr>
+            <th scope="col">Номер отчета</th>
+
+            <th scope="col">Год</th>
+
+            <th scope="col">Месяц</th>
+
+            <th scope="col">Фамилия</th>
+
+            <th scope="col">Количество тестов</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for zap in zapros %}
+            <tr>
+                <td>{{ zap['O_ID'] }}</td>
+
+                <td>{{ zap['O_Year'] }}</td>
+
+                <td>{{ zap['O_Month'] }}</td>
+
+                <td>{{ zap['Surname'] }}</td>
+
+                <td>{{ zap['Kol_test'] }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/menu" class="btn btn-outline-success mb-3">Назад в меню</a>
+{% endblock %}
