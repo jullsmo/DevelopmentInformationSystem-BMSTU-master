@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table mx-auto mb-3" style="width: 400px">
+        <thead>
+            <tr>
+                <h2>Покажите фамилии сотрудников, которые когда-либо тестировали оборудование с шифром 15</h2>
+                <th scope="col">Фамилия</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for zap in zapros %}
+                <tr>
+                    <td>{{ zap['Surname'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/menu" class="btn btn-outline-success mb-3">Назад в меню</a>
+{% endblock %}
